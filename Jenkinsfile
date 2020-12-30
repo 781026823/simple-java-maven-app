@@ -23,7 +23,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-sshPublisher(publishers: [sshPublisherDesc(configName: '192.168.1.20', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: 'bash /opt/test.sh', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/opt/', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/*.jar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
+sshPublisher(publishers: [sshPublisherDesc(configName: '测试机', transfers: [sshTransfer(cleanRemote: false, excludes: '', execCommand: '/opt/test.sh', execTimeout: 120000, flatten: false, makeEmptyDirs: false, noDefaultExcludes: false, patternSeparator: '[, ]+', remoteDirectory: '/opt/haha', remoteDirectorySDF: false, removePrefix: 'target/', sourceFiles: 'target/*.jar')], usePromotionTimestamp: false, useWorkspaceInPromotion: false, verbose: false)])
             }
         }
   }
